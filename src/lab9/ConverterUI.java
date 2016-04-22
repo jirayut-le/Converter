@@ -167,7 +167,7 @@ public class ConverterUI extends JFrame {
 					Unit[] unitArray = {unitFirstSelected , unitSecondSelected};
 					int numberSwitch = (numberArrayToConverter == 0) ? 1 : 0 ;
 					textFieldArray[numberSwitch].setText( String.format("%.3f", unitconverter.convert(value, unitArray[numberArrayToConverter], unitArray[numberSwitch])));
-				} catch (Exception e){
+				} catch (NumberFormatException e){
 					e.printStackTrace();
 				}
 			}
